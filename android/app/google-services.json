@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911137995684",
+    "project_id": "ettaba-99fa8",
+    "storage_bucket": "ettaba-99fa8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911137995684:android:e8e934b7b3df3fd8c25f31",
+        "android_client_info": {
+          "package_name": "com.example.verify_email_firebase_auth_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8coqYUVrvh4tY9Gr19-CtK9FoTG8XUy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
