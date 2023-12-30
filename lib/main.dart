@@ -2,6 +2,7 @@ import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'email_verification_page.dart';
 import 'firebase_options.dart';
 import 'homepage.dart';
 import 'loginwidget.dart';
@@ -71,7 +72,7 @@ class MainPage extends StatelessWidget {
               child: Text("Someting went wrong!"),
             );
           }else if (snapshot.hasData) {
-            return HomePage();
+            return EmailVerificationScreen() ;// HomePage();
           } else {
             return LoginWidget();
           }

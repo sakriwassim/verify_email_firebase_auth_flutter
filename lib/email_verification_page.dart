@@ -35,11 +35,23 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
         // minimumVersion
         androidMinimumVersion: '12');
 
-      String emailAuth = FirebaseAuth.instance.currentUser!.toString();
-    FirebaseAuth.instance.sendSignInLinkToEmail(
-        email: emailAuth, actionCodeSettings: acs)
-        .catchError((onError) => print('Error sending email verification $onError'))
-        .then((value) => print('Successfully sent email verification'));
+    String? emailAuth = FirebaseAuth.instance.currentUser?.toString();
+
+    if (emailAuth != null) {
+      FirebaseAuth.instance.sendSignInLinkToEmail(
+          email: emailAuth, actionCodeSettings: acs)
+          .catchError((onError) => print('Error sending email verification $onError'))
+          .then((value) => print('Successfully sent email verification'));
+    } else {
+      print('User is not signed in.');
+    }
+
+
+    // String emailAuth = FirebaseAuth.instance.currentUser!.toString();
+    // FirebaseAuth.instance.sendSignInLinkToEmail(
+    //     email: emailAuth, actionCodeSettings: acs)
+    //     .catchError((onError) => print('Error sending email verification $onError'))
+    //     .then((value) => print('Successfully sent email verification'));
 
     timer =
         Timer.periodic(const Duration(seconds: 3), (_) => checkEmailVerified());

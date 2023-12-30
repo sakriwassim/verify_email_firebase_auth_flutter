@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:verify_email_firebase_auth_flutter/utils.dart';
 
+import 'email_verification_page.dart';
 import 'forgetpasswordpage.dart';
 import 'main.dart';
 
@@ -145,6 +146,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            InkWell(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => EmailVerificationScreen(),
+              )),
+              child: const Text(
+                "verif ?",
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: Colors.yellow,
+                ),
               ),
             )
           ],
